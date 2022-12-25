@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&family=League+Spartan:wght@400;500;700&display=swap'");
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* reset all margin, padding & ul,ol by default */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* typography */
+
+:root {
+    --color__primary-1: rgb(81, 32, 81);
+    --color__primary-2: rgb(146, 123, 145);
+    --color__primary-3: rgb(239, 149, 70);
+    --color__primary-4: rgb(238, 105, 164);
+    --color__neutral-1: rgb(252, 250, 249);
+    --color__neutral-2: rgb(247, 242, 247);
+    --fs__h1-desktop: 5.5rem;
+    --fs__h2-desktop: 2.5rem;
+    --fs__h1-mobile-1: 2.5rem;
+    --fs__h2-mobile-1: 2rem;
+    --fs__body-mobile-1: 1rem;
+    --fs__body-mobile-2: 1.125rem;
+    --fs__body-desktop-1: 1.25rem;
+    --fs__body-desktop-2: 1rem;
+    --regular: 400;
+    --meduim: 500;
+    --bold: 700;
+    --padding-button: 1.2rem 3.6875rem;
+}
+
+body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 16px;
+    font-weight: var(--meduim);
+    background-image: url("../images/bg-pattern-top-mobile.svg"),
+        url("../images/bg-pattern-bottom-mobile.svg");
+
+    background-position: left 50px top 0, right 0 bottom -300px;
+    background-repeat: no-repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-size: contain, contain;
+    background-color: var(--white);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    margin-top: 5.125rem;
+    margin-bottom: 6.25rem;
+    max-width: 20rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.2rem;
+    justify-content: center;
+    align-items: center;
+    margin-inline: 1rem;
+}
+
+.text {
+    text-align: center;
+}
+
+.big-text {
+    margin-bottom: 1rem;
+}
+
+.big-text {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: var(--bold);
+    color: var(--color__primary-1);
+    font-family: 'League Spartan';
+    line-height: 2rem;
+    letter-spacing: -1.43px;
+    margin-bottom: 1.5rem;
+}
+
+.small-text {
+    max-width: 20.438rem;
+    font-family: 'League Spartan';
+    font-size: 1.188rem;
+    font-weight: var(--meduim);
+    color: var(--color__primary-2);
+    line-height: 1.563rem;
+    text-align: center;
+    margin-bottom: 1.9rem;
+}
+
+.rate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    width: 100%;
+    background-color: var(--color__neutral-2);
+    border-radius: 8px;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 0.7rem;
+}
+
+
+.rate p {
+    font-family: 'League Spartan';
+    color: var(--color__primary-1);
+    font-weight: var(--bold);
+    font-size: 1.063rem;
+    line-height: 1rem;
+    
+}
+
+/* stars */
+
+/* .rate::before {
+    content: url('../images/icon-star.svg') url('../images/icon-star.svg') url('../images/icon-star.svg') url('../images/icon-star.svg') url('../images/icon-star.svg');
+} */
+
+.rate img{
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.25rem;
+}
+
+.review {
+    background-color: var(--color__primary-1);
+    color: var(--color__neutral-1);
+    border-radius: 5px;
+    padding: 1.8rem;
+}
+
+/** rating header **/
+
+.reviews {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.reviewer-info {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+    min-width: fit-content;
+}
+
+.reviewer-info img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+}
+
+.reviewer-name {
+    font-size: 17px;
+    font-weight: var(--meduim);
+    line-height: 15.64px;
+}
+
+.verified {
+    font-weight: 400;
+    color: var(--color__primary-4);
+}
+
+.review-text {
+    font-family: 'League Spartan';
+    font-weight: var(--regular);
+    font-size: 17px;
+    line-height: 22px;
+    letter-spacing: -0.303571px;
+}
+
+
+@media only screen and (min-width: 700px) {
+    body {
+        background-image: url("../images/bg-pattern-top-desktop.svg"),
+            url("../images/bg-pattern-bottom-desktop.svg");
+
+        background-position: left -800px top 0, right -250px bottom 0;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .top{
+        display: flex;
+        flex-direction: row;
+    }
+
+    main {
+        max-width: 69.375rem;
+        margin: 5rem;
+        row-gap: 4rem;
+        column-gap: 0;
+        min-width: fit-content;
+    }
+
+    .text {
+        max-width: 27.813rem;
+        margin-right: 6.5rem;
+    }
+
+    .big-text {
+        font-style: normal;
+        font-weight: var(--bold);
+        font-size: 2.7rem;
+        line-height: 2.2rem;
+        letter-spacing: -0.125px;
+        text-align: left;
+        margin-bottom: 1.9rem;
+    }
+
+    .small-text {
+        max-width: 27.813rem;
+        font-family: 'League Spartan';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.063rem;
+        line-height: 1.2rem;
+        text-align: left;
+        letter-spacing: -0.633333px;
+    }
+
+    .ratings {
+        max-width: 34rem;        
+    }
+
+    .rate{
+        flex-direction: row;
+        justify-content: left;
+        gap: 1.7rem;
+        padding: 0.9rem 1.5rem;
+        width: 26rem;
+    }
+
+    .ratings .two{
+        margin-left: 2.7rem;
+    }
+    .ratings .three{
+        margin-left: 5.8rem;
+    }
+
+    .reviews {
+        flex-direction: row;
+    }
+
+    .review {
+        max-width: 21rem;
+        height: 13rem;
+        border-radius: 0.7rem;
+    }
+
+    .r-two{
+        margin-top: 1.7rem;
+    }
+
+    .r-three{
+        margin-top: 3.4rem;
+    }
+
+    .reviewer-name,
+    .verified{
+        font-size:  0.9375rem;
+    }
+
+    .review-text{
+        font-size: 0.9375rem;
+        line-height: 1.2rem;
+    }
+}
